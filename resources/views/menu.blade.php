@@ -7,7 +7,7 @@
       <h2>Menu</h2>
       @foreach ($categories as $categorie)
       <div>
-        <h3>{{ $categorie }}</h3>
+        <h3>{{ $categorie->titre }}</h3>
         <ul class="plats">
           @for ($i = 0; $i< 5; $i++)
           <li>

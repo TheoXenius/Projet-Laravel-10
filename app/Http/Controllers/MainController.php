@@ -2,17 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Actu;
 use Illuminate\Http\Request;
 
 class MainController extends Controller
 {
     public function home()
     {
-        return view('home');
+        $actus = Actu::all();
+
+        return view('home', [
+            'actus'=> $actus,
+        ]);
     }
+
     public function menu()
     {
-        $categories = ['Petit déjeuner', 'Entrées', 'Plats', 'Desserts', 'Boissons'];
+        $categories = Categories::all();
+        
         return view('menu', [
             'categories' => $categories,
         ]);  
@@ -22,3 +29,4 @@ class MainController extends Controller
         return view('reservation');
     }
 }
+
