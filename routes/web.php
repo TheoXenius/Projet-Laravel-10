@@ -18,4 +18,9 @@ Route::get('/', [MainController::class, 'home'])->name('main.home');
 
 Route::get('/menu', [MainController::class, 'menu'])->name('main.menu');
 
-Route::get('/reservation', [MainController::class, 'reservation'])->name('main.reservation');
+Route::get('/reservation/create', [MainController::class, 'reservation'])->name('main.reservation');
+
+Route::get('/plat/{id}', [MainController::class, 'plat'])->name('main.plat');
+
+Route::post('/reservation', [MainController::class, 'reservationStore'])->name('main.reservation.store');
+

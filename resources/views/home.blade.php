@@ -11,4 +11,13 @@
     @endforeach
 </ul>
 
+<ul class="ambiance">
+    @foreach ($photoAmbiances as $photoAmbiance)
+    <li>
+        <img src="{{asset('images/'.$photoAmbiance->fichier)}}" alt="ff">
+        <p>{{$photoAmbiance->description}}</p>
+    </li>
+    @endforeach
+<ul>
+    
 @endsection

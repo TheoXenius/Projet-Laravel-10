@@ -16,7 +16,7 @@ class Etiquette extends Model
     public function plats()
     {
         return $this
-        ->belongsToMany(Plat::class, 'etiquettes_plats', 'etiquettes_id', 'plats_id')
-        ->get();
+            ->belongsToMany(Plat::class, 'etiquettes_plats', 'etiquettes_id', 'plats_id')
+            ->get();
     }
 }
